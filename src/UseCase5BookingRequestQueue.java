@@ -10,16 +10,20 @@ import java.util.Queue;
 // Reservation class (Represents a booking request)
 class Reservation {
 
+    String reservationId;
     String guestName;
     String roomType;
 
-    Reservation(String guestName, String roomType) {
+    Reservation(String reservationId, String guestName, String roomType) {
+        this.reservationId = reservationId;
         this.guestName = guestName;
         this.roomType = roomType;
     }
 
     void display() {
-        System.out.println("Guest: " + guestName + " | Room: " + roomType);
+        System.out.println("ID: " + reservationId +
+                ", Guest: " + guestName +
+                ", Room: " + roomType);
     }
 }
 
@@ -65,10 +69,9 @@ public class UseCase5BookingRequestQueue {
         BookingRequestQueue bookingQueue = new BookingRequestQueue();
 
         // Add booking requests
-        bookingQueue.addRequest(new Reservation("Manan", "Single Room"));
-        bookingQueue.addRequest(new Reservation("Rahul", "Double Room"));
-        bookingQueue.addRequest(new Reservation("Amit", "Suite Room"));
-
+        bookingQueue.addRequest(new Reservation("R101", "Manan", "Single Room"));
+        bookingQueue.addRequest(new Reservation("R102", "Rahul", "Double Room"));
+        bookingQueue.addRequest(new Reservation("R103", "Amit", "Suite Room"));
         // Show queue
         bookingQueue.displayQueue();
 
