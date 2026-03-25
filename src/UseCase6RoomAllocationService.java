@@ -96,11 +96,11 @@ public class UseCase6RoomAllocationService {
         RoomAllocationService service = new RoomAllocationService();
 
         // Add requests (from UC5)
-        service.addRequest(new Reservation("Manan", "Single"));
-        service.addRequest(new Reservation("Rahul", "Double"));
-        service.addRequest(new Reservation("Amit", "Single"));
-        service.addRequest(new Reservation("Riya", "Suite"));
-        service.addRequest(new Reservation("Karan", "Suite")); // should fail
+        service.addRequest(new Reservation("R201", "Manan", "Single"));
+        service.addRequest(new Reservation("R202", "Rahul", "Double"));
+        service.addRequest(new Reservation("R203", "Amit", "Single"));
+        service.addRequest(new Reservation("R204", "Riya", "Suite"));
+        service.addRequest(new Reservation("R205", "Karan", "Suite")); // should failhould fail
 
         // Process bookings
         service.processBookings();
