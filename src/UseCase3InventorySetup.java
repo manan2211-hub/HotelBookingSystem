@@ -29,6 +29,10 @@ class RoomInventory {
     public void updateAvailability(String roomType, int count) {
         inventory.put(roomType, count);
     }
+    public HashMap<String, Integer> getAllRooms() {
+        return inventory;
+    }
+
 
     // Display all rooms
     public void displayInventory() {
